@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+      <!-- cargamos la libreria https://remixicon.com/-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>ICON CITY</title>
+</head>
+
+<body>
+    <div id="contenedor">
+                        <!-- 
+    ##############################
+    #         CABECERA           #
+    ##############################
+        Un grupo de navegación o contenido introductorio. 
+        Un elemento header normalmente contiene una sección de encabezado 
+        (un elemento h1-h6 o un elemento hgroup), 
+        pero puede contener otro tipo de elementos, 
+        como una tabla de contenidos, 
+        un formulario de búsqueda 
+        o cualquier logo importante.
+        En HTML5 usariamos la etiqueta HEADER
+    -->
+    <div id="cabecera">
+        <img src="images/logo-iconcity.png" alt="Muestra una imagen de ICON CITY">
+        <h1>ICON <span class='ri-police-car-line'>City</span></h1>
+    </div>
+
+        <!-- 
+    ##############################
+    #         NAVEGACIÓN         #
+    ##############################
+El elemento <nav> representa una sección de una página 
+que enlaza con otras páginas o partes de la misma página: 
+una sección con enlaces de navegación.
+-->
+        <div id="nav">
+            <ul id="menu">
+                <li><a class="active" href="#leyenda">Leyenda</a></li>
+                <li><a href="#tablero">Tablero</a></li>
+                <li><a href="#adam">Adam<mark><span class="ri-open-arm-line">Humano</span></a></li>
+                <li><a href="#eva">Eva<mark><span class="ri-open-arm-line"> Humano</span></a></li>
+                <li><a href="#hogar">Hogar<mark><span class="ri-home-line"> Hogar</span></mark></a></li>
+                <li><a href="#recursos">Acceso a datos<mark><span class="ri-base-station-line"> Recursos</span></mark></a></li>
+            </ul>
+        </div>
+
+
+
+        <div id="contenido">
+            <div id="leyenda" class="apartado">
+                <h1>Leyenda</h1>
+                <ol>
+                    <li><mark><span class="ri-open-arm-line"> Humano</span></mark>: es un personaje.</li>
+                    <li> <mark><span class="ri-home-line"> Hogar</span></mark>: hogar de los personajes.</li>
+                    <li><mark><span class="ri-base-station-line"> Recurso</span></mark>: antena de comunicación.</li>
+                </ol>
+                    
+        
+
+            </div>
+
+            <div id="tablero" class="apartado">
+                <h1>Tablero</h1>
+                <div id="tablero" class="tablero">
+                
+                    <iframe width="800" height="500" src="tablero.html" frameborder="0"  allowfullscreen></iframe>
+                </div>
+    
+            </div>
+
+            <div id="adam" class="apartado">
+                <h1>Adam <mark><span class="ri-open-arm-line"> Humano</span></mark></h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, similique! Placeat aliquam atque reprehenderit in ab? Maiores magni incidunt quo necessitatibus, odit fugiat hic est perferendis! Et voluptate neque quae.</p>
+                <img src="images/adam.png" alt="">
+    
+            </div>
+            <div id="eva" class="apartado">
+                <h1>Eva <mark><span class="ri-open-arm-line"> Humano</span></mark></h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, similique! Placeat aliquam atque reprehenderit in ab? Maiores magni incidunt quo necessitatibus, odit fugiat hic est perferendis! Et voluptate neque quae.</p>
+                <img src="images/eva.png" alt="">
+    
+            </div>
+            <div id="hogar" class="apartado">
+                <h1>Casa <mark><span class="ri-home-line"> Hogar</span></mark></h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, similique! Placeat aliquam atque reprehenderit in ab? Maiores magni incidunt quo necessitatibus, odit fugiat hic est perferendis! Et voluptate neque quae.</p>
+                <img src="images/hogar.jpg" height="200px" alt="">
+    
+            </div>
+            <div id="recursos" class="apartado">
+                <h1>Recursos <mark><span class="ri-base-station-line"> Antena</span></mark></h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, similique! Placeat aliquam atque reprehenderit in ab? Maiores magni incidunt quo necessitatibus, odit fugiat hic est perferendis! Et voluptate neque quae.</p>
+                <img src="images/antena.jpg" height="200px" alt="">
+    
+            </div>
+            <div id="mas" class="apartado">
+
+                <h1>Historia</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus repellat odio perferendis, necessitatibus velit aspernatur numquam est distinctio enim sapiente delectus, vero blanditiis vitae eum, amet dolorem? Necessitatibus, ipsam magni!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, totam? Expedita, ut nulla. Eius officia minima amet aut ullam recusandae iure assumenda magni quisquam adipisci! Hic repellendus natus vel quos!</p>
+            </div>
+        </div>
+        <!-- 
+         ##############################
+         #      PIE DE PÁGINA         #
+         ##############################
+
+    En HTML5 usamos la etiqueta <footer>    
+    Representa el pie de una sección. Un pie tradicionalmente contiene 
+    información acerca de su sección, como quién escribió el contenido, 
+    enlaces relacionados, copyright y similares.
+  -->
+        <div id="pie">
+            <a href="#mas"><img src="images/logo.png" alt="Muestra el logo de la tierra"></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

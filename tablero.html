@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cargamos la libreria https://remixicon.com/-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Título -->
+    <title>Tablero</title>
+    <style>
+        .tablero {
+            width: 1000px;
+            height: 1000px;
+        }
+        /** Entidades */
+        .objeto {
+            font-size: 80px;
+        }
+        .par {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+
+        .impar {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+
+        .par:hover {
+            background-color: rgb(11, 219, 238);
+        }
+
+
+        .impar:hover {
+            background-color: rgb(230, 230, 177);
+            width: 100px;
+            height: 100px;
+        }
+
+     
+       
+    </style>
+    <script>
+        var logs = [];
+        // tablero es [ fila1, fila2, fila3, fila4]
+        var tablero = [["ADAM", "vacio", "vacio", "vacio"], ["vacio", "vacio", "CASA", "vacio"], ["Adam", "vacio", "ANTENA", "vacio"], ["EVA", "vacio", "vacio", "vacio"]];
+                     
+        function function_onclic(celda) {
+            logs.push(celda);
+            //imprimir valor de lo que hay en la tabla
+            alert(valor_en_tablero(celda));
+            alert("PILA: ["+ logs+ "] - Celda onclic:"+ celda);
+            
+            pintar(celda);
+        }
+
+        function valor_en_tablero(celda){
+            columna = -1;
+            if(celda[0]==="A"){
+                columna = 0;
+            }else if(celda[0]==="B"){
+                columna = 1;
+            }else if(celda[0]==="C"){
+                columna = 2;
+            }else if(celda[0]==="D"){
+                columna = 3;
+            }
+            fila = celda[1];
+
+          return tablero[fila][columna];
+        }
+
+
+
+        function pintar(celda){
+           
+            pintar_objeto_celda("A0","humano");
+           // pintar_objeto_celda("A1","hogar");
+        }
+
+ //En el código HTML los contenedores celdas dentro de las tablas <td class="celda">
+           // Ejemplo:
+           ///    <div id="C2" class="par" onclick="function_onclic('C2')">
+          ////        celda == "C2"
+          /////     El id del bloque clase par es "C2"
+
+
+        function pintar_objeto_celda(celda,objeto){
+
+            
+            var tablero_html = document.getElementById(celda);
+           
+            clase_icono = "";
+            if(objeto==="humano"){
+                clase_icono='ri-open-arm-line';
+            }else if(objeto==="recursos"){
+                clase_icono='ri-base-station-line';
+            }else if(objeto==="hogar"){
+                clase_icono='ri-home-line';
+            }
+
+ 
+            tablero_html.classList.add(clase_icono);
+            tablero_html.classList.add('objeto');
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <table id="tablero" name="tablero">
+            <tr>
+                <td class="celda">
+                    <div id="A0" class="par" onclick="function_onclic('A0')"></div>
+                </td>
+                <td class="celda">
+                    <div id="B0" class="impar" onclick="function_onclic('B0')"></div>
+                </td>
+                <td class="celda">
+                    <div id="C0" class="par" onclick="function_onclic('C0')"></div>
+                </td>
+                <td class="impar">
+                    <div id="D0" class="impar" onclick="function_onclic('D0')"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="celda">
+                    <div id="A1" class="impar" onclick="function_onclic('A1')"></div>
+                </td>
+                <td class="celda">
+                    <div id="B1" class="par" onclick="function_onclic('B1')"></div>
+                </td>
+                <td class="celda">
+                    <div id="C1" class="impar objeto ri-home-line" onclick="function_onclic('C1')">
+                        
+                    </div>
+                </td>
+                <td class="celda">
+                    <div id="D1" class="par" onclick="function_onclic('D1')"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="celda">
+                    <div id="A2" class="par" onclick="function_onclic('A2')"></div>
+                </td>
+                <td class="celda">
+                    <div id="B2" class="impar" onclick="function_onclic('B2')"></div>
+                </td>
+                <td class="celda">
+                    <div id="C2" class="par objeto ri-base-station-line" onclick="function_onclic('C2')">
+                        
+                    </div>
+                </td>
+                <td class="celda">
+                    <div id="D2" class="impar" onclick="function_onclic('D2')"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="celda">
+                    <div id="A3" class="impar ri-open-arm-line objeto" onclick="function_onclic('A3')">
+                    </div>
+                </td>
+                <td class="celda">
+                    <div id="B3" class="par" onclick="function_onclic('B3')"></div>
+                    </div>
+                </td>
+                <td class="celda">
+                    <div id="C3" class="impar" onclick="function_onclic('C3')"></div>
+                </td>
+                <td class="celda">
+                    <div id="D3" class="par" onclick="function_onclic('D3')"></div>
+                </td>
+            </tr>
+    
+    </table>
+
+
+</body>
+
+</html>
